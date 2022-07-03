@@ -62,7 +62,7 @@ const App: React.Fc = () => {
             })}
           </Routes>
         </Content>
-        <Footer> Picture-Admin  ©2022 Created by  WangRen</Footer>
+        <Footer> Picture-Admin   ©2022 Created by  WangRen</Footer>
       </Layout>
     </Layout>
   )
