@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Layout, Spin } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { ArrowLeftOutlined } from '@ant-design/icons'
 const { Header } = Layout
+ 
 import styles from './index.less'
-export default function MainLayout({ title = '', children, className = '', showBack = false, loading = false }) {
+ const MainLayout:React.Fc=({ title = '', children, className = '', showBack = false, loading = false })=> {
   const navigate = useNavigate()
-
   return (
     <Layout>
       <Header>
@@ -29,3 +29,4 @@ export default function MainLayout({ title = '', children, className = '', showB
     </Layout>
   )
 }
+export default MainLayout

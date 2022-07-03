@@ -5,18 +5,19 @@ import styles from './index.less'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import type { MenuProps } from 'antd'
 import menuList from '@src/config/routerMap'
-const { Header, Content, Footer, Sider } = Layout
+const { Content, Footer, Sider } = Layout
 
 
 const App: React.Fc = () => {
-  const [currentKey, setCurrentKey] = useState('/home')
+
   const navigate = useNavigate()
   
-
+  //点击跳转
   const onClick: MenuProps['onClick'] = e => {
     navigate(e.key)
-    setCurrentKey(e.key)
   }
+
+  //路由平铺
   const getRouteList = items => {
     let arr = []
     items.forEach(item => {
@@ -32,7 +33,6 @@ const App: React.Fc = () => {
   const childrenRoutes = useMemo(() => {
     return getRouteList(menuList)
   }, [])
- console.log(menuList,childrenRoutes)
 
   return (
     <Layout hasSider className={styles.layout}>
@@ -62,7 +62,7 @@ const App: React.Fc = () => {
             })}
           </Routes>
         </Content>
-        <Footer>Ant Design ©2018 Created by Ant UED</Footer>
+        <Footer>Picture-Admin ©2022 Created by WangRen</Footer>
       </Layout>
     </Layout>
   )

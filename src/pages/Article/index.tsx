@@ -1,13 +1,13 @@
-import React from 'react';
-import { Space, Table, Tag } from 'antd';
-import type { ColumnsType } from 'antd/lib/table';
+import React from 'react'
+import { Space, Table, Tag } from 'antd'
+import type { ColumnsType } from 'antd/lib/table'
 import Container from '@components/Container'
 interface DataType {
-  key: string;
-  name: string;
-  age: number;
-  address: string;
-  tags: string[];
+  key: string
+  name: string
+  age: number
+  address: string
+  tags: string[]
 }
 
 const columns: ColumnsType<DataType> = [
@@ -34,15 +34,15 @@ const columns: ColumnsType<DataType> = [
     render: (_, { tags }) => (
       <>
         {tags.map(tag => {
-          let color = tag.length > 5 ? 'geekblue' : 'green';
+          let color = tag.length > 5 ? 'geekblue' : 'green'
           if (tag === 'loser') {
-            color = 'volcano';
+            color = 'volcano'
           }
           return (
             <Tag color={color} key={tag}>
               {tag.toUpperCase()}
             </Tag>
-          );
+          )
         })}
       </>
     ),
@@ -51,13 +51,13 @@ const columns: ColumnsType<DataType> = [
     title: 'Action',
     key: 'action',
     render: (_, record) => (
-      <Space size="middle">
+      <Space size='middle'>
         <a>Invite {record.name}</a>
         <a>Delete</a>
       </Space>
     ),
   },
-];
+]
 
 const data: DataType[] = [
   {
@@ -81,10 +81,12 @@ const data: DataType[] = [
     address: 'Sidney No. 1 Lake Park',
     tags: ['cool', 'teacher'],
   },
-];
-const Article = () => {
-  return <Container >
-        <Table columns={columns} dataSource={data} />
-  </Container>
+]
+const Article: React.FC<any> = () => {
+  return (
+    <Container>
+      <Table columns={columns} dataSource={data} />
+    </Container>
+  )
 }
 export default Article
