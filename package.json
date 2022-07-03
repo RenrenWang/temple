@@ -18,17 +18,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx,jsx}": [
-      "eslint ./src --fix",
-      "git add"
-     ]
-  },
+  
   "devDependencies": {
     "@babel/core": "^7.18.6",
     "@babel/preset-react": "^7.18.6",
