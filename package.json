@@ -24,10 +24,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts}": [
-      "eslint ./src --fix",
-      "git add"
-    ]
+    "*.{js,ts,tsx,jsx}": [
+      "eslint ./src --fix"
+     ]
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
