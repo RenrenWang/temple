@@ -3,9 +3,9 @@ import { Layout, Spin } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { ArrowLeftOutlined } from '@ant-design/icons'
 const { Header } = Layout
- 
 import styles from './index.less'
- const MainLayout:React.Fc=({ title = '', children, className = '', showBack = false, loading = false })=> {
+
+const MainLayout:React.Fc=({ title = '', children, className = '', showBack = false, loading = false })=> {
   const navigate = useNavigate()
   return (
     <Layout>
@@ -20,12 +20,11 @@ import styles from './index.less'
           {title}
         </h2>
       </Header>
-
-      <div className={styles.bodyLayout}>
-        <Spin spinning={loading}>
-          <div className={className}>{children}</div>
-        </Spin>
-      </div>
+<div className={styles.bodyLayout}>
+<Spin spinning={loading}>
+                  <div className={className}>{children}</div>
+   </Spin>
+   </div>
     </Layout>
   )
 }

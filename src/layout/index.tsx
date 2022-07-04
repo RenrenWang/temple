@@ -7,11 +7,9 @@ import type { MenuProps } from 'antd'
 import menuList from '@src/config/routerMap'
 const { Content, Footer, Sider } = Layout
 
-
 const App: React.Fc = () => {
-
   const navigate = useNavigate()
-  
+
   //点击跳转
   const onClick: MenuProps['onClick'] = e => {
     navigate(e.key)
@@ -22,10 +20,10 @@ const App: React.Fc = () => {
     let arr = []
     items.forEach(item => {
       if (item?.component) {
-        arr.push({ key: item?.key, path: item?.path, label: item?.label,component:item?.component })
-      }else if (item?.children) {
+        arr.push({ key: item?.key, path: item?.path, label: item?.label, component: item?.component })
+      } else if (item?.children) {
         const result = getRouteList(item.children)
-        arr=arr.concat(result)
+        arr = arr.concat(result)
       }
     })
     return arr
@@ -62,7 +60,7 @@ const App: React.Fc = () => {
             })}
           </Routes>
         </Content>
-        <Footer> Picture-Admin   ©2022 Created by  WangRen</Footer>
+        <Footer> Picture-Admin ©2022 Created by WangRen</Footer>
       </Layout>
     </Layout>
   )
