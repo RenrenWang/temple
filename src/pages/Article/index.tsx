@@ -82,7 +82,7 @@ const data: DataType[] = [
     tags: ['cool', 'teacher'],
   },
 ]
-const Article: React.FC<any> = () => {
+const Article: React.FC = () => {
   return (
     <Container>
       <Table columns={columns} dataSource={data} />

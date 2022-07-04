@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 import { Route, Routes } from "react-router-dom";
 import App from "@src/layout"
-const AppRouter: FC<any> = () => {
+const AppRouter: FC = () => {
   return (
     <Routes>
       <Route path="/*" element={<App/>}></Route>
