@@ -7,7 +7,7 @@
     "dev": "webpack  serve --config=webpack.dev.js",
     "build": "webpack --config=webpack.dll.js && webpack --config=webpack.prod.js",
     "dll": "webpack --config=webpack.dll.js",
-    "lint": "eslint ./src --fix"
+    "lint": "eslint ./src --fix --max-warnings 0"
   },
   "author": "wrr",
   "license": "ISC",
